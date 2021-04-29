@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#Datos{
+    margin: 20px;
+    width: 30%;
+    border: 1px solid black;
+    float: left;
+}
+#Resultados{
+    margin: 20px;
+    width: 50%;
+    border: 1px solid black;
+    float: left;
+}

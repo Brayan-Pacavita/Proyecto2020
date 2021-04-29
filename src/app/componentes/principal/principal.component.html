@@ -1,0 +1,61 @@
+<section id="seccion">
+    
+    <h1>Ingrese Datos</h1>
+    
+    <form id="Datos">
+    <h2>Datos del estudiante</h2>
+    <br>
+
+        <p>Nombre: 
+        <input type= "text" name="nombre" [(ngModel)]="usuario.nombre"/> 
+        <br>
+        <br>
+        <p>Apellido: 
+            <input type= "text" name="Apellido" [(ngModel)]="usuario.apellidos"/> 
+        <br>   
+        <br>
+        <p>Edad
+        <input type= "number" name="Edad" [(ngModel)]="usuario.edad"/>
+        <br>
+        <br>   
+        <h2>Notas</h2> <br>
+        
+        <p>Algebra: 
+        <input type= "number" name="Algebra" [(ngModel)]="usuario.algebra"/>
+        <br>
+        <br>
+        <p>Quimica:
+        <input type= "number" name="Quimica" [(ngModel)]="usuario.quimica"/> 
+        <br>
+        <br>
+        <p>Fisica: 
+        <input type= "number" name="Fisica" [(ngModel)]="usuario.fisica"/> 
+        <br>
+        <br>
+        
+          
+    </form >
+    
+    <form id="Resultados">
+        <h2>Resultados</h2><br>
+        <p>nombre: {{usuario.nombre}}</p>
+        <br> 
+        <p>Apellido: {{usuario.apellidos}}</p>
+        <br> 
+        <p>Edad: {{usuario.edad}}</p>
+        <br> 
+        <p>{{usuario.esMayor()}}</p>
+        <br> 
+        <p>{{usuario.Algebra()}}</p>
+        <br> 
+        <p>{{usuario.Quimica()}}</p>
+        <br> 
+        <p>{{usuario.Fisica()}}</p>
+        <br> 
+        <p>{{usuario.Promedio()}}</p>
+        <br> 
+
+    
+    </form>
+    
+    </section>

@@ -1,0 +1,31 @@
+<section id="seccion">
+<h1>Blog</h1>
+
+<input [(ngModel)]="datos.numero" type="number">
+<p *ngIf="datos.numero>=0; else negativo">Es positivo</p>
+<ng-template #negativo><p>Es negativo</p></ng-template>
+
+<h1 *ngIf="estado && dia>=10; else fuera"> Bienvendios al sitio web</h1>
+<ng-template #fuera><h1>Sitio fuera de servicio</h1></ng-template>
+
+<p *ngIf="mayorEdad()">Es mayor de edad </p>
+
+<table border=1>
+    <tr>
+        <td>arreglos</td>
+    </tr> 
+    
+    <tr *ngFor="let i of arreglo">
+        <td>{{i}}</td>
+    </tr>
+</table>
+
+<input [(ngModel)] ="numero" type="number">
+
+<ul>
+    <li *ngFor=" let i of arreglo">
+    {{numero}} x {{i}} = {{numero*i}}
+    </li>
+</ul>
+</section>
+

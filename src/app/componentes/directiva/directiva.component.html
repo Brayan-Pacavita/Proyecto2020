@@ -1,0 +1,53 @@
+<section id="seccion">
+<h1>PAPELERIA</h1>
+
+<p>Cantidad de articulos vendidos en el dia:
+    <input [(ngModel)]="valor1" type="number">
+</p>
+<p>Costo por unidad:
+    <input [(ngModel)]="valor2" type="number">
+</p>
+<p>
+    <select [(ngModel)]="Opciones">
+        <option value="ninguna">Elija una opción</option>
+        <option value="lapices">Lapices</option>
+        <option value="cartulinas">Cartulinas</option>
+        <option value="esferos">Esferos</option>
+        <option value="temperas">Temperas</option>
+        <option value="reglas">Reglas</option>
+    </select>
+</p>
+<p>Total de venta del dia:
+    <span [ngSwitch]="Opciones">
+        <span *ngSwitchCase="'lapices'">{{valor1*valor2}}</span>
+        <span *ngSwitchCase="'cartulinas'">{{valor1*valor2}}</span>
+        <span *ngSwitchCase="'esferos'">{{valor1*valor2}}</span>
+        <span *ngSwitchCase="'temperas'">{{valor1*valor2}}</span>
+        <span *ngSwitchCase="'reglas'">{{valor1*valor2}}</span>
+        <span *ngSwitchDefault>(No eligió una opcion) </span>
+    </span>
+</p>        
+<P>Total de stocks de la papeleria:
+    <span [ngSwitch]="Opciones">
+        <span *ngSwitchCase="'lapices'">{{lapices-valor1}}</span>
+        <span *ngSwitchCase="'cartulinas'">{{cartulinas-valor1}}</span>
+        <span *ngSwitchCase="'esferos'">{{esferos-valor1}}</span>
+        <span *ngSwitchCase="'temperas'">{{temperas-valor1}}</span>
+        <span *ngSwitchCase="'reglas'">{{reglas-valor1}}</span>
+        <span *ngSwitchDefault>(No eligió una opcion) </span>
+    </span>
+</P>
+<P>Total de ventas del Stock:
+    <span [ngSwitch]="Opciones">
+        <span *ngSwitchCase="'lapices'">{{valor1*valor2}}</span>
+        <span *ngSwitchCase="'cartulinas'">{{valor1*valor2}}</span>
+        <span *ngSwitchCase="'esferos'">{{valor1*valor2}}</span>
+        <span *ngSwitchCase="'temperas'">{{valor1*valor2}}</span>
+        <span *ngSwitchCase="'reglas'">{{valor1*valor2}}</span>
+        <span *ngSwitchDefault>(No eligió una opcion) </span>
+    </span>
+
+
+</P>
+
+</section>
